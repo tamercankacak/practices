@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 //https://www.hackerrank.com/challenges/mini-max-sum/problem
-public class IntegerOverload_21122021 {
+public class _20211221_IntegerOverload {
   public static void main(String[] args) {
     miniMaxSum(
         new ArrayList<Integer>() {

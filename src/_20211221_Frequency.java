@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 //https://www.hackerrank.com/challenges/birthday-cake-candles/problem
-public class Frequency_21122021 {
+public class _20211221_Frequency {
 
   public static void main(String[] args) {
     //
