@@ -1,3 +1,5 @@
+package Algorithms;
+
 import java.util.ArrayList;
 import java.util.List;
 // https://www.hackerrank.com/challenges/grading/problem
