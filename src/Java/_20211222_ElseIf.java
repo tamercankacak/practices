@@ -3,7 +3,7 @@ package Java;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/java-if-else/problem
-public class _20211222_elseif {
+public class _20211222_ElseIf {
   public static void main(String[] args) {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     Scanner scanner = new Scanner(System.in);

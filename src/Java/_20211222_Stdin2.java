@@ -3,7 +3,7 @@ package Java;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/java-stdin-stdout/problem
-public class _20211222_stdin2 {
+public class _20211222_Stdin2 {
   public static void main(String[] args) {
     //
     Scanner scanner = new Scanner(System.in);
