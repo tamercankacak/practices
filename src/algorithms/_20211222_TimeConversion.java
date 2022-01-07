@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 import java.text.DateFormat;
 import java.text.ParseException;

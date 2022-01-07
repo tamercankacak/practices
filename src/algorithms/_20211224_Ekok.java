@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 // https://www.hackerrank.com/challenges/kangaroo/problem
 public class _20211224_Ekok {

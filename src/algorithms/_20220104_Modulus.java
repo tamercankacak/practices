@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 // https://www.hackerrank.com/challenges/day-of-the-programmer/problem
 public class _20220104_Modulus {

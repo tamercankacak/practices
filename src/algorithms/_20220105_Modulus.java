@@ -1,4 +1,4 @@
-package Algorithms;
+package algorithms;
 
 // https://www.hackerrank.com/challenges/drawing-book/problem
 public class _20220105_Modulus {
