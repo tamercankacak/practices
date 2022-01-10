@@ -3,6 +3,7 @@ package javasolution;
 import java.util.*;
 
 // https://www.hackerrank.com/challenges/java-anagrams/problem
+@SuppressWarnings("ALL")
 public class Practice20220104Anagram {
   public static void main(String[] args) {
     System.out.println(isAnagram("anagramm", "marganaa") ? "Anagrams" : "Not Anagrams");
