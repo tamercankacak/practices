@@ -1,39 +1,51 @@
 package algorithms;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // https://www.hackerrank.com/challenges/between-two-sets/problem
-public class Pracitce20211227GcdLcm {
-  public static void main(String[] args) {}
 
-  public static int getTotalX(List<Integer> a, List<Integer> b) {
+@SuppressWarnings("ALL")
+public class Pracitce20211227GcdLcm {
+
+  /** */
+  static void main(final String[] args) {
+    getTotalX(new ArrayList<>(), new ArrayList<>());
+  }
+
+  static int getTotalX(final List<Integer> a, final List<Integer> b) {
+
     /* Find LCM for the arrayList a */
-    int lcm_arr = a.get(0);
+    int lcmArr = a.get(0);
     for (int i = 1; i < a.size(); i++) {
-      lcm_arr = lcm(lcm_arr, a.get(i));
+      lcmArr = lcm(lcmArr, a.get(i));
     }
 
     /* Find GCD for the arrayList b */
-    int gcd_arr = b.get(0);
+    int gcdArr = b.get(0);
     for (int i = 1; i < b.size(); i++) {
-      gcd_arr = gcd(gcd_arr, b.get(i));
+      gcdArr = gcd(gcdArr, b.get(i));
     }
 
     /* Count the number of multiples of the LCM, which are factors of the GCD. */
     int count = 0;
-    for (int i = lcm_arr, j = 1; i <= gcd_arr; i = j * lcm_arr) {
-      if (gcd_arr % i == 0) count++;
+    for (int i = lcmArr, j = 1; i <= gcdArr; i = j * lcmArr) {
+      if (gcdArr % i == 0) {
+        count++;
+      }
       j++;
     }
     return count;
   }
 
-  static int gcd(int a, int b) {
-    if (a == 0) return b;
+  static int gcd(final int a, final int b) {
+    if (a == 0) {
+      return b;
+    }
     return gcd(b % a, a);
   }
 
-  static int lcm(int a, int b) {
+  static int lcm(final int a, final int b) {
     return a * b / gcd(a, b);
   }
 }

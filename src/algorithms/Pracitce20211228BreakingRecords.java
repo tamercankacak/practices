@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 // https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
+@SuppressWarnings("checkstyle:HideUtilityClassConstructor")
 public class Pracitce20211228BreakingRecords {
-  public static void main(String[] args) {
+  /** @param args */
+  @SuppressWarnings("checkstyle:MagicNumber")
+  public static void main(final String[] args) {
     //
     System.out.println(
         breakingRecords(
@@ -24,13 +27,22 @@ public class Pracitce20211228BreakingRecords {
             }));
   }
 
-  public static List<Integer> breakingRecords(List<Integer> scores) {
-    int highest, lowest;
-    highest = lowest = scores.get(0);
-    List<Integer> finalScores = new ArrayList<Integer>(){{
-      add(0);
-      add(0);
-    }};
+  /**
+   * @param scores
+   * @return
+   */
+  public static List<Integer> breakingRecords(final List<Integer> scores) {
+    int highest;
+    int lowest;
+    highest = scores.get(0);
+    lowest = highest;
+    List<Integer> finalScores =
+        new ArrayList<Integer>() {
+          {
+            add(0);
+            add(0);
+          }
+        };
     for (int i = 1; i < scores.size(); i++) {
       if (scores.get(i) > highest) {
         highest = scores.get(i);
