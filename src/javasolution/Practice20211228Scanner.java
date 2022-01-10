@@ -3,6 +3,7 @@ package javasolution;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/java-int-to-string/problem
+@SuppressWarnings("ALL")
 public class Practice20211228Scanner {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);

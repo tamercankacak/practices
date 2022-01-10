@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 //https://www.hackerrank.com/challenges/mini-max-sum/problem
+@SuppressWarnings("ALL")
 public class Practice20211221IntegerOverload {
   public static void main(String[] args) {
     miniMaxSum(

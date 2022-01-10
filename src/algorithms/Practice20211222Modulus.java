@@ -3,6 +3,7 @@ package algorithms;
 import java.util.ArrayList;
 import java.util.List;
 // https://www.hackerrank.com/challenges/grading/problem
+@SuppressWarnings("ALL")
 public class Practice20211222Modulus {
   public static void main(String[] args) {
     List<Integer> list =

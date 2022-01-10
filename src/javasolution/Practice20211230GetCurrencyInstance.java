@@ -5,6 +5,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/java-currency-formatter/problem
+@SuppressWarnings("ALL")
 public class Practice20211230GetCurrencyInstance {
   public static void main(String[] args) {
     //

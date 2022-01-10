@@ -2,6 +2,7 @@ package javasolution;
 
 import java.util.Scanner;
 // https://www.hackerrank.com/challenges/java-strings-introduction/problem
+@SuppressWarnings("ALL")
 public class Practice20211231Capitalize {
   public static void main(String[] args) {
 

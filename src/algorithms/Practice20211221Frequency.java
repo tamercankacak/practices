@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 //https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+@SuppressWarnings("ALL")
 class Practice20211221Frequency {
 
    @SuppressWarnings("checkstyle:MagicNumber")

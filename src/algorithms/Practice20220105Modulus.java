@@ -1,6 +1,7 @@
 package algorithms;
 
 // https://www.hackerrank.com/challenges/drawing-book/problem
+@SuppressWarnings("ALL")
 public class Practice20220105Modulus {
   public static void main(String[] args) {
     int result = pageCount(5, 4);

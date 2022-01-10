@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //
+@SuppressWarnings("ALL")
 public class Practice20211231DivisibleSumPairs {
   public static void main(String[] args) {
     System.out.println(

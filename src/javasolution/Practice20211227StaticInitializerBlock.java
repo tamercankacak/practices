@@ -3,6 +3,7 @@ package javasolution;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/java-static-initializer-block/problem
+@SuppressWarnings("ALL")
 public class Practice20211227StaticInitializerBlock {
   public static Scanner scanner = new Scanner(System.in);
   public static int B, H;

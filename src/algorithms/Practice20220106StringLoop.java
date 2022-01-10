@@ -3,6 +3,7 @@ package algorithms;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/counting-valleys/problem
+@SuppressWarnings("ALL")
 class Practice20220106StringLoop {
 
   static void main(final String[] args) {

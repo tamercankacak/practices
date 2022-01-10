@@ -1,6 +1,7 @@
 package algorithms;
 
 // https://www.hackerrank.com/challenges/day-of-the-programmer/problem
+@SuppressWarnings("ALL")
 public class Practice20220104Modulus {
   public static void main(String[] args) {
     System.out.println(dayOfProgrammer(2100));

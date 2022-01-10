@@ -1,6 +1,7 @@
 package algorithms;
 
 // https://www.hackerrank.com/challenges/kangaroo/problem
+@SuppressWarnings("ALL")
 public class Practice20211224Ekok {
   public static void main(String[] args) {
     //

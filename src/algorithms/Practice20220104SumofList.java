@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // https://www.hackerrank.com/challenges/bon-appetit/problem
+@SuppressWarnings("ALL")
 public class Practice20220104SumofList {
   public static void main(String[] args) {
     bonAppetit(

@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 // https://www.hackerrank.com/challenges/java-string-tokens/problem
+@SuppressWarnings("ALL")
 public class Practice20220106StreamFilter {
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);

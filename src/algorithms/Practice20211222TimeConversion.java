@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 // https://www.hackerrank.com/challenges/time-conversion
+@SuppressWarnings("ALL")
 public class Practice20211222TimeConversion {
   public static void main(String[] args) {
     System.out.println(timeConversion("07:05:45PM"));

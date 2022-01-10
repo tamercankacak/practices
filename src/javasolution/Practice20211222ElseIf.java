@@ -3,6 +3,7 @@ package javasolution;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/java-if-else/problem
+@SuppressWarnings("ALL")
 public class Practice20211222ElseIf {
   public static void main(String[] args) {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */

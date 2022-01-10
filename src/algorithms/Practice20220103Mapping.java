@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 // https://www.hackerrank.com/challenges/migratory-birds/problem
+@SuppressWarnings("ALL")
 public class Practice20220103Mapping {
   public static void main(String[] args) {
     int result =

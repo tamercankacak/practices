@@ -3,6 +3,7 @@ package javasolution;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/java-loops/problem
+@SuppressWarnings("ALL")
 public class Practice20211222Loops2 {
   public static void main(String[] args) {
     //

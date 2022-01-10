@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // https://www.hackerrank.com/challenges/the-birthday-bar/problem
+@SuppressWarnings("ALL")
 public class Pracitce20211230SubarrayDivision {
   public static void main(String[] args) {
     System.out.println(

@@ -3,6 +3,7 @@ package javasolution;
 import java.util.Scanner;
 
 // https://www.hackerrank.com/challenges/java-datatypes/problem
+@SuppressWarnings("ALL")
 public class Practice20211223Primitives {
   public static void main(String[] args) {
     //

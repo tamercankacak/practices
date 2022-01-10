@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
-@SuppressWarnings("checkstyle:HideUtilityClassConstructor")
+@SuppressWarnings("ALL")
 public class Pracitce20211228BreakingRecords {
   /** @param args */
   @SuppressWarnings("checkstyle:MagicNumber")

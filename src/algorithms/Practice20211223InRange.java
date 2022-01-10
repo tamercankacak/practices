@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // https://www.hackerrank.com/challenges/apple-and-orange/problem
+@SuppressWarnings("ALL")
 public class Practice20211223InRange {
 
   public static void main(String[] args) {

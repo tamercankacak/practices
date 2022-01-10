@@ -1,6 +1,7 @@
 package javasolution;
 
 // https://www.hackerrank.com/challenges/java-string-compare/problem
+@SuppressWarnings("ALL")
 public class Practice20220104Substring2 {
   public static void main(String[] args) {
     System.out.println(getSmallestAndLargest(
