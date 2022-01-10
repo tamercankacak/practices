@@ -5,9 +5,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 //https://www.hackerrank.com/challenges/birthday-cake-candles/problem
-public class _20211221_Frequency {
+class _20211221_Frequency {
 
-  public static void main(String[] args) {
+   @SuppressWarnings("checkstyle:MagicNumber")
+   static void main(final String[] args) {
     //
     List<Integer> list = new ArrayList<>();
     list.add(44);

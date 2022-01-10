@@ -2,6 +2,6 @@
 
 ## This is my Hackerrank questions solution package.
 
-- Java
+- javasolution
 
 https://www.hackerrank.com/tamercankacak

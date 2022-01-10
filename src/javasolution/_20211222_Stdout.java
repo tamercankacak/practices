@@ -1,4 +1,4 @@
-package Java;
+package javasolution;
 // https://www.hackerrank.com/challenges/welcome-to-java/problem
 public class _20211222_Stdout {
   public static void main(String[] args) {

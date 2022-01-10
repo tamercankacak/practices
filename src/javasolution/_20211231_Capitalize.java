@@ -1,4 +1,4 @@
-package Java;
+package javasolution;
 
 import java.util.Scanner;
 // https://www.hackerrank.com/challenges/java-strings-introduction/problem

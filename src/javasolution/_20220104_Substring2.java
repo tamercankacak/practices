@@ -1,4 +1,4 @@
-package Java;
+package javasolution;
 
 // https://www.hackerrank.com/challenges/java-string-compare/problem
 public class _20220104_Substring2 {
