@@ -6,6 +6,6 @@
 - datastructures
 - javasolution
 
-https://www.hackerrank.com/tamercankacak
+[hackerrank](https://www.hackerrank.com/tamercankacak)
 
-https://leetcode.com/tamercankacak/
+[leetcode](https://leetcode.com/tamercankacak)
