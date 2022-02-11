@@ -11,6 +11,36 @@ import org.junit.Test;
  * @author tamercankacak
  */
 public class MethodTests {
+
+  @Test
+  public void testExample() {
+    int[] exampleTest1 = {2,6,8,-10,3};
+    int[] exampleTest2 = {206847684,1056521,7,17,1901,21104421,7,1,35521,1,7781};
+    int[] exampleTest3 = {Integer.MAX_VALUE, 0, 1};
+    assertEquals(3, FindOutlier.find(exampleTest1));
+    assertEquals(206847684, FindOutlier.find(exampleTest2));
+    assertEquals(0, FindOutlier.find(exampleTest3));
+  }
+
+  @Test
+  public void testSolution() {
+    assertEquals("############5616", Maskify.maskify("4556364607935616"));
+    assertEquals("#######5616",      Maskify.maskify(     "64607935616"));
+    assertEquals("1",                Maskify.maskify(               "1"));
+    assertEquals("",                 Maskify.maskify(                ""));
+
+    // "What was the name of your first pet?"
+    assertEquals("##ippy",                                    Maskify.maskify("Skippy")                                  );
+    assertEquals("####################################man!",  Maskify.maskify("Nananananananananananananananana Batman!"));
+  }
+
+  @Test public void test4a() {
+    assertEquals("aaaa", StringRepeat.repeatStr(4, "a"));
+    assertEquals("HelloHelloHello", StringRepeat.repeatStr(3, "Hello"));
+    assertEquals("", StringRepeat.repeatStr(5, ""));
+    assertEquals("", StringRepeat.repeatStr(0, "kata"));
+  }
+
   @Test
   public void testBoolToWord() {
     assertEquals(YesOrNo.boolToWord(true), "Yes");
