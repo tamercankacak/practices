@@ -14,6 +14,19 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void test1() {
+    assertEquals(Arge.nbYear(1500, 5, 100, 5000), 15);
+    assertEquals(Arge.nbYear(1500000, 2.5, 10000, 2000000), 10);
+    assertEquals(Arge.nbYear(1500000, 0.25, 1000, 2000000), 94);
+  }
+
+  @Test
+  public void testGrassHopper() {
+    assertEquals(1, GrassHopper.summation(1));
+    assertEquals(36, GrassHopper.summation(8));
+  }
+
+  @Test
   public void testSimpleDirReduc() {
     assertArrayEquals(
         "\"NORTH\", \"SOUTH\", \"SOUTH\", \"EAST\", \"WEST\", \"NORTH\", \"WEST\"",
