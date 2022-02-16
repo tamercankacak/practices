@@ -14,6 +14,77 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void sampleTests() {
+    assertArrayEquals(
+        new double[] {1, 1, 1, 3, 5, 9, 17, 31, 57, 105},
+        Xbonacci.tribonacci(new double[] {1, 1, 1}, 10),
+        1e-10);
+    assertArrayEquals(
+        new double[] {0, 0, 1, 1, 2, 4, 7, 13, 24, 44},
+        Xbonacci.tribonacci(new double[] {0, 0, 1}, 10),
+        1e-10);
+    assertArrayEquals(
+        new double[] {0, 1, 1, 2, 4, 7, 13, 24, 44, 81},
+        Xbonacci.tribonacci(new double[] {0, 1, 1}, 10),
+        1e-10);
+  }
+
+  @Test
+  public void publicTests() {
+    assertEquals(true, TriangleTester.isTriangle(1, 2, 2));
+    assertEquals(false, TriangleTester.isTriangle(7, 2, 2));
+  }
+
+  @Test
+  public void printerTest() {
+    System.out.println("printerError Fixed Tests");
+    String s = "aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz";
+    assertEquals("3/56", Printer.printerError(s));
+  }
+
+  @Test
+  public void testBasic() {
+    assertEquals(9, SquareSum.squareSum(new int[] {1, 2, 2}));
+    assertEquals(5, SquareSum.squareSum(new int[] {1, 2}));
+    assertEquals(50, SquareSum.squareSum(new int[] {5, -3, 4}));
+    assertEquals(0, SquareSum.squareSum(new int[] {}));
+  }
+
+  @Test
+  public void testSomething() {
+    assertEquals("8j8mBliB8gimjB8B8jlB", NoSpace.noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
+    assertEquals(
+        "88Bifk8hB8BB8BBBB888chl8BhBfd",
+        NoSpace.noSpace("8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd"));
+    assertEquals("8aaaaaddddr", NoSpace.noSpace("8aaaaa dddd r     "));
+    assertEquals("jfBmgklf8hg88lbe8", NoSpace.noSpace("jfBm  gk lf8hg  88lbe8 "));
+    assertEquals("8jaam", NoSpace.noSpace("8j aam"));
+  }
+
+  @Test
+  public void BasicTests() {
+    System.out.println("****** Basic Tests ******");
+    assertEquals(3, Persist.persistence(39));
+    assertEquals(0, Persist.persistence(4));
+    assertEquals(2, Persist.persistence(25));
+    assertEquals(4, Persist.persistence(999));
+  }
+
+  @Test
+  public void testfindNextSquare() {
+    assertEquals(-1, NumberFun.findNextSquare(114));
+    assertEquals(144, NumberFun.findNextSquare(121));
+    assertEquals(676, NumberFun.findNextSquare(625));
+  }
+
+  @Test
+  public void example1() {
+    int expected = 11;
+    int actual = SmallestIntegerFinder.findSmallestInt(new int[] {78, 56, 232, 12, 11, 43});
+    assertEquals(expected, actual);
+  }
+
+  @Test
   public void test1() {
     assertEquals(Arge.nbYear(1500, 5, 100, 5000), 15);
     assertEquals(Arge.nbYear(1500000, 2.5, 10000, 2000000), 10);
