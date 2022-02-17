@@ -3,6 +3,7 @@ package coderwars;
 import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertArrayEquals;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import org.junit.Test;
 
@@ -12,6 +13,30 @@ import org.junit.Test;
  * @author tamercankacak
  */
 public class MethodTests {
+
+  @Test
+  public void testOrder() {
+    assertEquals(Order.order("Empty input should return empty string"),"");
+  }
+
+  @Test
+  public void metroTest() {
+    ArrayList<int[]> list = new ArrayList<int[]>();
+    list.add(new int[] {10, 0});
+    list.add(new int[] {3, 5});
+    list.add(new int[] {2, 5});
+    assertEquals(5, Metro.countPassengers(list));
+  }
+
+  @Test
+  public void counterTest() {
+    Boolean[] array1 = {
+      true, true, true, false, true, true, true, true, true, false, true, false, true, false, false,
+      true, true, true, true, true, false, false, true, true
+    };
+    assertEquals("There are 17 sheeps in total", 17, new Counter().countSheeps(array1));
+    assertEquals("There are 17 sheeps in total", 0, new Counter().countSheeps(null));
+  }
 
   @Test
   public void sampleTests() {
