@@ -15,8 +15,54 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testFindEvenIndex() {
+    assertEquals(3, FindEvenIndex.findEvenIndex(new int[] {1, 2, 3, 4, 3, 2, 1}));
+    assertEquals(1, FindEvenIndex.findEvenIndex(new int[] {1, 100, 50, -51, 1, 1}));
+    assertEquals(-1, FindEvenIndex.findEvenIndex(new int[] {1, 2, 3, 4, 5, 6}));
+    assertEquals(3, FindEvenIndex.findEvenIndex(new int[] {20, 10, 30, 10, 10, 15, 35}));
+    assertEquals(-1, FindEvenIndex.findEvenIndex(new int[] {-8505, -5130, 1926, -9026}));
+    assertEquals(
+        1, FindEvenIndex.findEvenIndex(new int[] {2824, 1774, -1490, -9084, -9696, 23094}));
+    assertEquals(
+        6, FindEvenIndex.findEvenIndex(new int[] {4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4}));
+  }
+
+  @Test
+  public void testStringEndsWith() {
+    assertEquals(true, StringEndsWith.solution("abc", "bc"));
+    assertEquals(false, StringEndsWith.solution("abc", "d"));
+  }
+
+  @Test
+  public void FixedTests() {
+    assertEquals(18, Century.century(1705));
+    assertEquals(19, Century.century(1900));
+    assertEquals(17, Century.century(1601));
+    assertEquals(20, Century.century(2000));
+    assertEquals(1, Century.century(89));
+  }
+
+  @Test
+  public void testDigPow() {
+    assertEquals(1, DigPow.digPow(89, 1));
+    assertEquals(-1, DigPow.digPow(92, 1));
+    assertEquals(51, DigPow.digPow(46288, 3));
+  }
+
+  @Test
+  public void testOddOrEven() {
+    assertEquals("odd", OddOrEven.oddOrEven(new int[] {2, 5, 34, 6}));
+  }
+
+  @Test
+  public void testDivisibleNb() {
+    assertEquals(true, DivisibleNb.isDivisible(12, 4, 3));
+    assertEquals(false, DivisibleNb.isDivisible(3, 3, 4));
+  }
+
+  @Test
   public void testOrder() {
-    assertEquals(Order.order("Empty input should return empty string"),"");
+    assertEquals(Order.order("Empty input should return empty string"), "");
   }
 
   @Test
@@ -35,7 +81,6 @@ public class MethodTests {
       true, true, true, true, true, false, false, true, true
     };
     assertEquals("There are 17 sheeps in total", 17, new Counter().countSheeps(array1));
-    assertEquals("There are 17 sheeps in total", 0, new Counter().countSheeps(null));
   }
 
   @Test
