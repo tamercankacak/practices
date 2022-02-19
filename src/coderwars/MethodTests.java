@@ -15,6 +15,29 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testFindMissingLetter() {
+    assertEquals('e', FindMissinLetter.findMissingLetter(new char[] {'a', 'b', 'c', 'd', 'f'}));
+    assertEquals('P', FindMissinLetter.findMissingLetter(new char[] {'O', 'Q', 'R', 'S'}));
+  }
+
+  @Test
+  public void testNthSeries() {
+    assertEquals("1.57", NthSeries.seriesSum(5));
+    assertEquals("1.77", NthSeries.seriesSum(9));
+    assertEquals("1.94", NthSeries.seriesSum(15));
+  }
+
+  @Test
+  public void keepHydratedTest() {
+
+    assertEquals(1, KeepHydrated.Liters(2));
+    assertEquals(0, KeepHydrated.Liters(0.97));
+    assertEquals(7, KeepHydrated.Liters(14.64));
+    assertEquals(800, KeepHydrated.Liters(1600.20));
+    assertEquals(40, KeepHydrated.Liters(80));
+  }
+
+  @Test
   public void testFindEvenIndex() {
     assertEquals(3, FindEvenIndex.findEvenIndex(new int[] {1, 2, 3, 4, 3, 2, 1}));
     assertEquals(1, FindEvenIndex.findEvenIndex(new int[] {1, 100, 50, -51, 1, 1}));
