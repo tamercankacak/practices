@@ -1,10 +1,13 @@
 package coderwars;
 
 import static junit.framework.TestCase.assertEquals;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertArrayEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Optional;
+
 import org.junit.Test;
 
 /**
@@ -13,6 +16,32 @@ import org.junit.Test;
  * @author tamercankacak
  */
 public class MethodTests {
+
+  @Test
+  public void sampleTestCases() {
+    double precision = 0.0000000000001;
+    assertEquals(1.0, FindTheUniqueNumber.findUniq(new double[] {0, 1, 0}), precision);
+    assertEquals(2.0, FindTheUniqueNumber.findUniq(new double[] {1, 1, 1, 2, 1, 1}), precision);
+  }
+
+  @Test
+  public void testReverseWords() {
+    assertEquals(
+        "ehT kciuq nworb xof spmuj revo eht yzal .god",
+        ReverseWords.reverseWords("The quick brown fox jumps over the lazy dog."));
+    assertEquals("elppa", ReverseWords.reverseWords("apple"));
+    assertEquals("a b c d", ReverseWords.reverseWords("a b c d"));
+    assertEquals("elbuod  decaps  sdrow", ReverseWords.reverseWords("double  spaced  words"));
+    assertEquals("   ", ReverseWords.reverseWords("   "));
+  }
+
+  @Test
+  public void testBasics() {
+    assertEquals(11, BasicOperations.basicMath("+", 4, 7));
+    assertEquals((-3), BasicOperations.basicMath("-", 15, 18));
+    assertEquals((25), BasicOperations.basicMath("*", 5, 5));
+    assertEquals((7), BasicOperations.basicMath("/", 49, 7));
+  }
 
   @Test
   public void testFindMissingLetter() {
