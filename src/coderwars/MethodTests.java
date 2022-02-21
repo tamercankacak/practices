@@ -18,6 +18,33 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testSortTheOdd() {
+    assertArrayEquals(
+        new int[] {1, 3, 2, 8, 5, 4}, SortTheOdd.sortArray(new int[] {5, 3, 2, 8, 1, 4}));
+    assertArrayEquals(new int[] {1, 3, 5, 8, 0}, SortTheOdd.sortArray(new int[] {5, 3, 1, 8, 0}));
+    assertArrayEquals(new int[] {}, SortTheOdd.sortArray(new int[] {}));
+  }
+
+  @Test
+  public void testLineNumbering() {
+    assertEquals(Arrays.asList(), LineNumbering.number(Arrays.asList()));
+    assertEquals(
+        Arrays.asList("1: a", "2: b", "3: c"), LineNumbering.number(Arrays.asList("a", "b", "c")));
+    assertEquals(
+        Arrays.asList("1: ", "2: ", "3: ", "4: ", "5: "),
+        LineNumbering.number(Arrays.asList("", "", "", "", "")));
+  }
+
+  @Test
+  public void testAbbreviateTwoWords() {
+    assertEquals("S.H", AbbreviateTwoWords.abbrevName("Sam Harris"));
+    assertEquals("P.F", AbbreviateTwoWords.abbrevName("Patrick Feenan"));
+    assertEquals("E.C", AbbreviateTwoWords.abbrevName("Evan Cole"));
+    assertEquals("P.F", AbbreviateTwoWords.abbrevName("P Favuzzi"));
+    assertEquals("D.M", AbbreviateTwoWords.abbrevName("David Mendieta"));
+  }
+
+  @Test
   public void sampleTestCases() {
     double precision = 0.0000000000001;
     assertEquals(1.0, FindTheUniqueNumber.findUniq(new double[] {0, 1, 0}), precision);
