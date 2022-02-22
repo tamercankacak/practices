@@ -18,6 +18,69 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testMaps() {
+    assertArrayEquals(new int[] {2, 4, 6}, Maps.masp(new int[] {1, 2, 3}));
+    assertArrayEquals(new int[] {8, 2, 2, 2, 8}, Maps.masp(new int[] {4, 1, 1, 1, 4}));
+    assertArrayEquals(new int[] {2, 2, 2, 2, 2, 2}, Maps.masp(new int[] {1, 1, 1, 1, 1, 1}));
+  }
+
+  @Test
+  public void testNeedleInHaystack() {
+    Object[] haystack1 = {"3", "123124234", null, "needle", "world", "hay", 2, "3", true, false};
+    Object[] haystack2 = {
+      "283497238987234",
+      "a dog",
+      "a cat",
+      "some random junk",
+      "a piece of hay",
+      "needle",
+      "something somebody lost a while ago"
+    };
+    Object[] haystack3 = {
+      1, 2, 3, 4, 5, 6, 7, 8, 8, 7, 5, 4, 3, 4, 5, 6, 67, 5, 5, 3, 3, 4, 2, 34, 234, 23, 4, 234,
+      324, 324, "needle", 1, 2, 3, 4, 5, 5, 6, 5, 4, 32, 3, 45, 54
+    };
+    assertEquals("found the needle at position 3", NeedleInHaystack.findNeedle(haystack1));
+    assertEquals("found the needle at position 5", NeedleInHaystack.findNeedleCodeWars(haystack2));
+    assertEquals("found the needle at position 30", NeedleInHaystack.findNeedle(haystack3));
+  }
+
+  @Test
+  public void testStringSplit() {
+    String s = "abcdef";
+    String s1 = "HelloWorld";
+    assertEquals(
+        "Should handle even string", "[ab, cd, ef]", Arrays.toString(StringSplit.solution(s)));
+    assertEquals(
+        "Should handle even string",
+        "[He, ll, oW, or, ld]",
+        Arrays.toString(StringSplit.solution(s1)));
+
+    s = "abcde";
+    s1 = "LovePizza";
+    assertEquals(
+        "Should handle odd string", "[ab, cd, e_]", Arrays.toString(StringSplit.solution(s)));
+    assertEquals(
+        "Should handle odd string",
+        "[Lo, ve, Pi, zz, a_]",
+        Arrays.toString(StringSplit.solution(s1)));
+  }
+
+  @Test
+  public void testMinMax() {
+    assertArrayEquals(new int[] {1, 5}, MinMax.minMax(new int[] {1, 2, 3, 4, 5}));
+    assertArrayEquals(new int[] {5, 2334454}, MinMax.minMax(new int[] {2334454, 5}));
+    assertArrayEquals(new int[] {1, 1}, MinMax.minMax(new int[] {1}));
+  }
+
+  @Test
+  public void testConvertNumberToReversedArrayOfDigits() {
+    assertArrayEquals(
+        new int[] {1, 3, 2, 5, 3}, ConvertNumberToReversedArrayOfDigits.digitize(35231));
+    assertArrayEquals(new int[] {0}, ConvertNumberToReversedArrayOfDigits.digitize(0));
+  }
+
+  @Test
   public void testSortTheOdd() {
     assertArrayEquals(
         new int[] {1, 3, 2, 8, 5, 4}, SortTheOdd.sortArray(new int[] {5, 3, 2, 8, 1, 4}));
