@@ -18,6 +18,27 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testASum() {
+    assertEquals(2022, ASum.findNb(4183059834009L));
+    assertEquals(-1, ASum.findNb(24723578342962L));
+    assertEquals(4824, ASum.findNb(135440716410000L));
+    assertEquals(3568, ASum.findNb(40539911473216L));
+  }
+
+  @Test
+  public void testMoney() {
+    System.out.println("Fixed Tests calculateYears");
+    assertEquals(3, Money.calculateYears(1000, 0.05, 0.18, 1100));
+    assertEquals(14, Money.calculateYears(1000, 0.01625, 0.18, 1200));
+    assertEquals(0, Money.calculateYears(1000, 0.05, 0.18, 1000));
+  }
+
+  @Test
+  public void testStringToNumber() {
+    assertEquals("stringToNumber(1234)", 1234, StringToNumber.stringToNumber("1234"));
+  }
+
+  @Test
   public void testMaps() {
     assertArrayEquals(new int[] {2, 4, 6}, Maps.masp(new int[] {1, 2, 3}));
     assertArrayEquals(new int[] {8, 2, 2, 2, 8}, Maps.masp(new int[] {4, 1, 1, 1, 4}));
