@@ -18,6 +18,35 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void simpleArray1() {
+    assertEquals(2, getActualFor(1, 1, 2));
+  }
+
+  private int getActualFor(int... numbers) {
+    return FindStrayNumber.stray(numbers);
+  }
+
+  @Test
+  public void testInvertValues() {
+
+    int[] input = new int[] {-1, -2, -3, -4, -5};
+    int[] expected = new int[] {1, 2, 3, 4, 5};
+    assertEquals(Arrays.toString(expected), Arrays.toString(InvertValues.invert(input)));
+
+    input = new int[] {-1, 2, -3, 4, -5};
+    expected = new int[] {1, -2, 3, -4, 5};
+    assertEquals(Arrays.toString(expected), Arrays.toString(InvertValues.invert(input)));
+
+    input = new int[] {};
+    expected = new int[] {};
+    assertEquals(Arrays.toString(expected), Arrays.toString(InvertValues.invert(input)));
+
+    input = new int[] {0};
+    expected = new int[] {0};
+    assertEquals(Arrays.toString(expected), Arrays.toString(InvertValues.invert(input)));
+  }
+
+  @Test
   public void testASum() {
     assertEquals(2022, ASum.findNb(4183059834009L));
     assertEquals(-1, ASum.findNb(24723578342962L));
