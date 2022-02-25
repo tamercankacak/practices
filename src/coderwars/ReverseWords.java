@@ -1,5 +1,9 @@
 package coderwars;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class ReverseWords {
   public static String reverseWords(final String original) {
 
@@ -9,5 +13,11 @@ public class ReverseWords {
       strArray[i] = new StringBuilder(strArray[i]).reverse().toString();
     }
     return String.join(" ", strArray);
+  }
+
+  public static String reverseWords2(String str) {
+    List Words = Arrays.asList(str.split(" "));
+    Collections.reverse(Words);
+    return String.join(" ", Words);
   }
 }
