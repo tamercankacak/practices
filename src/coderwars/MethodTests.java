@@ -18,8 +18,45 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
-  public void simpleArray1() {
-    assertEquals(2, getActualFor(1, 1, 2));
+  public void testCalculateAverage() {
+    final double DELTA = 1e-15;
+    assertEquals(1, CalculateAverage.find_average(new int[] {1, 1, 1}), DELTA);
+    assertEquals(2, CalculateAverage.find_average(new int[] {1, 2, 3}), DELTA);
+  }
+
+  @Test
+  public void testContains() {
+    assertEquals(Contains.check(new Object[] {66, 101}, 66), true);
+    assertEquals(Contains.check(new Object[] {80, 117, 115, 104, 45, 85, 112, 115}, 45), true);
+    assertEquals(Contains.check(new Object[] {'t', 'e', 's', 't'}, 'e'), true);
+    assertEquals(Contains.check(new Object[] {"what", "a", "great", "kata"}, "kat"), false);
+  }
+
+  @Test
+  public void testReverseWords2() {
+    assertEquals("eating like I", ReverseWords.reverseWords2("I like eating"));
+    assertEquals("flying like I", ReverseWords.reverseWords2("I like flying"));
+    assertEquals("nice is world The", ReverseWords.reverseWords2("The world is nice"));
+  }
+
+  @Test
+  public void countPositivesSumNegatives_BasicTest() {
+    int[] expectedResult = new int[] {10, -65};
+    assertArrayEquals(
+        expectedResult,
+        CountPositives.countPositivesSumNegatives(
+            new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15}));
+    expectedResult = new int[] {8, -50};
+    assertArrayEquals(
+        expectedResult,
+        CountPositives.countPositivesSumNegatives(
+            new int[] {0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14}));
+  }
+
+  @Test
+  public void testClock() {
+
+    assertEquals(61000, Clock.Past(0, 1, 1));
   }
 
   private int getActualFor(int... numbers) {
