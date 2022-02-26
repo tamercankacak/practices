@@ -18,6 +18,39 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testBuildTower() {
+    assertEquals(String.join(",", "*"), String.join(",", BuildTower.TowerBuilder(1)));
+    assertEquals(String.join(",", " * ", "***"), String.join(",", BuildTower.TowerBuilder(2)));
+    assertEquals(
+        String.join(",", "  *  ", " *** ", "*****"), String.join(",", BuildTower.TowerBuilder(3)));
+  }
+
+  @Test
+  public void test() {
+    assertEquals(CountDig.nbDig(5750, 0), 4700);
+    assertEquals(CountDig.nbDig(11011, 2), 9481);
+    assertEquals(CountDig.nbDig(12224, 8), 7733);
+    assertEquals(CountDig.nbDig(11549, 1), 11905);
+  }
+
+  @Test
+  public void testChocolate() {
+    assertEquals(24, Chocolate.breakChocolate(5, 5));
+    assertEquals(0, Chocolate.breakChocolate(1, 1));
+  }
+
+  @Test
+  public void testGreeter() {
+    assertEquals("should greet some people normally", "Hello, Jim!", Greeter.greet("Jim"));
+    assertEquals("should greet some people normally", "Hello, Jane!", Greeter.greet("Jane"));
+    assertEquals("should greet some people normally", "Hello, Simon!", Greeter.greet("Simon"));
+    assertEquals(
+        "should greet Johnny a little bit more special",
+        "Hello, my love!",
+        Greeter.greet("Johnny"));
+  }
+
+  @Test
   public void testCalculateAverage() {
     final double DELTA = 1e-15;
     assertEquals(1, CalculateAverage.find_average(new int[] {1, 1, 1}), DELTA);
