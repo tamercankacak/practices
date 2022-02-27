@@ -6,6 +6,7 @@ import static org.junit.Assert.assertArrayEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 import org.junit.Test;
@@ -16,6 +17,73 @@ import org.junit.Test;
  * @author tamercankacak
  */
 public class MethodTests {
+
+  @Test
+  public void testZywOo() {
+    assertEquals(true, ZywOo.validateUsr("regex"));
+    assertEquals(false, ZywOo.validateUsr("a"));
+    assertEquals(false, ZywOo.validateUsr("Hass"));
+    assertEquals(false, ZywOo.validateUsr("Hasd_12assssssasasasasasaasasasasas"));
+    assertEquals(false, ZywOo.validateUsr(""));
+    assertEquals(true, ZywOo.validateUsr("____"));
+    assertEquals(false, ZywOo.validateUsr("012"));
+    assertEquals(true, ZywOo.validateUsr("p1pp1"));
+    assertEquals(false, ZywOo.validateUsr("asd43 34"));
+    assertEquals(true, ZywOo.validateUsr("asd43_34"));
+  }
+
+  @Test
+  public void testSmileFaces() {
+    List<String> a = new ArrayList<String>();
+    a.add("4)");
+    a.add("o~P");
+    a.add("oxP");
+    a.add(":D");
+    a.add(":)");
+    a.add("5D)");
+    a.add("'-D");
+    a.add("'D");
+    a.add("8-)");
+    a.add("~;-D");
+    a.add("dp)");
+    a.add("5-D");
+    a.add("'D");
+    a.add("opD");
+    a.add(";~)");
+    a.add(":8p");
+    a.add(":8)");
+    a.add("')");
+    a.add(";D");
+    a.add(";pP");
+    a.add(";~d");
+    a.add("p~)");
+    a.add(":x");
+    a.add("p~D");
+    a.add(";))");
+    a.add("p-)x");
+    a.add("pP");
+    a.add(";X");
+    a.add("p(8D");
+    a.add(";~d");
+    a.add("52)");
+    assertEquals(4, SmileFaces.countSmileys(a));
+  }
+
+  @Test
+  public void testFindDivisor() {
+    assertEquals("Should return 1 if the parameter equals 1", 1, FindDivisor.numberOfDivisors(1));
+    assertEquals("Should return 3 if the parameter equals 4", 3, FindDivisor.numberOfDivisors(4));
+    assertEquals("Should return 2 if the parameter equals 5", 2, FindDivisor.numberOfDivisors(5));
+    assertEquals("Should return 6 if the parameter equals 12", 6, FindDivisor.numberOfDivisors(12));
+    assertEquals("Should return 8 if the parameter equals 30", 8, FindDivisor.numberOfDivisors(30));
+  }
+
+  @Test
+  public void testSchool() {
+    assertEquals(2, School.getAverage(new int[] {2, 2, 2, 2}));
+    assertEquals(3, School.getAverage(new int[] {1, 2, 3, 4, 5}));
+    assertEquals(1, School.getAverage(new int[] {1, 1, 1, 1, 1, 1, 1, 2}));
+  }
 
   @Test
   public void testBuildTower() {
