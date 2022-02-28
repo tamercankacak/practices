@@ -3,6 +3,8 @@ package coderwars;
 import static junit.framework.TestCase.assertEquals;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,6 +19,44 @@ import org.junit.Test;
  * @author tamercankacak
  */
 public class MethodTests {
+
+  @Test
+  public void testHighestScoringWord() {
+    assertEquals("taxi", HighestScoringWord.high("man i need a taxi up to ubud"));
+    assertEquals("volcano", HighestScoringWord.high("what time are we climbing up to the volcano"));
+    assertEquals("semynak", HighestScoringWord.high("take me to semynak"));
+    assertEquals("aa", HighestScoringWord.high("aa b"));
+    assertEquals("b", HighestScoringWord.high("b aa"));
+    assertEquals("bb", HighestScoringWord.high("bb d"));
+    assertEquals("d", HighestScoringWord.high("d bb"));
+    assertEquals("aaa", HighestScoringWord.high("aaa b"));
+  }
+
+  @Test
+  public void testArithmeticFunction() {
+    assertEquals(
+        "'add' should return the two numbers added together!",
+        3,
+        ArithmeticFunction.arithmetic(1, 2, "add"));
+    assertEquals(
+        "'subtract' should return a minus b!", 6, ArithmeticFunction.arithmetic(8, 2, "subtract"));
+    assertEquals(
+        "'multiply' should return a multiplied by b!",
+        10,
+        ArithmeticFunction.arithmetic(5, 2, "multiply"));
+    assertEquals(
+        "'divide' should return a divided by b!", 4, ArithmeticFunction.arithmetic(8, 2, "divide"));
+  }
+
+  @Test
+  public void testStringUtils() {
+    assertFalse(StringUtils.isDigit(""));
+    assertTrue(StringUtils.isDigit("7"));
+    assertFalse(StringUtils.isDigit(" "));
+    assertFalse(StringUtils.isDigitCodeWars("a"));
+    assertFalse(StringUtils.isDigit("a5"));
+    assertFalse(StringUtils.isDigitCodeWars("14"));
+  }
 
   @Test
   public void testZywOo() {
