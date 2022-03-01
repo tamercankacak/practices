@@ -21,6 +21,73 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testEmptyArray() throws Exception {
+    assertEquals("Empty arrays should have a max of 0", 0, Max.sequence(new int[] {}));
+    assertEquals(
+        "Example array should have a max of 6",
+        6,
+        Max.sequence(new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+  }
+
+  @Test
+  public void testPrime() {
+    assertFalse("0  is not prime", Prime.isPrime(0));
+    assertFalse("1  is not prime", Prime.isPrime(1));
+    assertTrue("2  is prime", Prime.isPrime(2));
+    assertTrue("73 is prime", Prime.isPrime(73));
+    assertFalse("75 is not prime", Prime.isPrime(75));
+    assertFalse("-1 is not prime", Prime.isPrime(-1));
+    assertTrue("3 is prime", Prime.isPrime(3));
+    assertTrue("5 is prime", Prime.isPrime(5));
+    assertTrue("7 is prime", Prime.isPrime(7));
+    assertTrue("41 is prime", Prime.isPrime(41));
+    assertTrue("5099 is prime", Prime.isPrime(5099));
+    assertFalse("4 is not prime", Prime.isPrime(4));
+    assertFalse("6 is not prime", Prime.isPrime(6));
+    assertFalse("8 is not prime", Prime.isPrime(8));
+    assertFalse("9 is not prime", Prime.isPrime(9));
+    assertFalse("45 is not prime", Prime.isPrime(45));
+    assertFalse("-5 is not prime", Prime.isPrime(-5));
+    assertFalse("-8 is not prime", Prime.isPrime(-8));
+    assertFalse("-41 is not prime", Prime.isPrime(-41));
+  }
+
+  @Test
+  public void basicTests() {
+    int[][] arr = {
+      {0, 0},
+      {1, 5},
+      {3, 5},
+      {5, 5},
+      {7, 10},
+      {39, 40}
+    };
+    Arrays.stream(arr)
+        .forEach(
+            (testCase) -> {
+              assertEquals(
+                  "Input: " + testCase[0],
+                  testCase[1],
+                  RoundToTheNextMultipleOf5.roundToNext5(testCase[0]));
+            });
+  }
+
+  @Test
+  public void testBasicTrue() {
+    String n = "Your girlscout cookies are ready to ship. Your total comes to tree fiddy";
+    System.out.println(n);
+    assertTrue(Nessie.isLockNessMonster(n));
+    n = "Yo, I heard you were on the lookout for Nessie. Let me know if you need assistance.";
+    System.out.println(n);
+    assertFalse(Nessie.isLockNessMonster(n));
+  }
+
+  @Test
+  public void testSequence() {
+    assertArrayEquals(new int[] {5, 4, 3, 2, 1}, Sequence.reverse(5));
+  }
+
+  @Test
   public void testHighestScoringWord() {
     assertEquals("taxi", HighestScoringWord.high("man i need a taxi up to ubud"));
     assertEquals("volcano", HighestScoringWord.high("what time are we climbing up to the volcano"));
