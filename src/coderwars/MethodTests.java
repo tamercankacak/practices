@@ -21,6 +21,90 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testProdFib() {
+    long[] r = new long[] {55, 89, 1};
+    assertArrayEquals(r, ProdFib.productFib(4895));
+    r = new long[] {89, 144, 0};
+    assertArrayEquals(r, ProdFib.productFib(5895));
+  }
+
+  @Test
+  public void testLongestConsec() {
+    System.out.println("longestConsec Fixed Tests");
+    assertEquals(
+        LongestConsec.longestConsec(
+            new String[] {"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"},
+            2),
+        "abigailtheta");
+    assertEquals(
+        LongestConsec.longestConsec(
+            new String[] {
+              "ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"
+            },
+            1),
+        "oocccffuucccjjjkkkjyyyeehh");
+    assertEquals(LongestConsec.longestConsec(new String[] {}, 3), "");
+    assertEquals(
+        LongestConsec.longestConsec(
+            new String[] {
+              "itvayloxrp",
+              "wkppqsztdkmvcuwvereiupccauycnjutlv",
+              "vweqilsfytihvrzlaodfixoyxvyuyvgpck"
+            },
+            2),
+        "wkppqsztdkmvcuwvereiupccauycnjutlvvweqilsfytihvrzlaodfixoyxvyuyvgpck");
+    assertEquals(
+        LongestConsec.longestConsec(
+            new String[] {"wlwsasphmxx", "owiaxujylentrklctozmymu", "wpgozvxxiu"}, 2),
+        "wlwsasphmxxowiaxujylentrklctozmymu");
+    assertEquals(
+        LongestConsec.longestConsec(
+            new String[] {"zone", "abigail", "theta", "form", "libe", "zas"}, -2),
+        "");
+    assertEquals(
+        LongestConsec.longestConsec(
+            new String[] {"it", "wkppv", "ixoyx", "3452", "zzzzzzzzzzzz"}, 3),
+        "ixoyx3452zzzzzzzzzzzz");
+    assertEquals(
+        LongestConsec.longestConsec(
+            new String[] {"it", "wkppv", "ixoyx", "3452", "zzzzzzzzzzzz"}, 15),
+        "");
+    assertEquals(
+        LongestConsec.longestConsec(
+            new String[] {"it", "wkppv", "ixoyx", "3452", "zzzzzzzzzzzz"}, 0),
+        "");
+  }
+
+  @Test
+  public void testFighter() {
+    assertEquals(
+        "Lew", Fighter.declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"));
+    assertEquals(
+        "Harry",
+        Fighter.declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Harry"));
+    assertEquals(
+        "Harald",
+        Fighter.declareWinner(new Fighter("Harald", 20, 5), new Fighter("Harry", 5, 4), "Harry"));
+    assertEquals(
+        "Harald",
+        Fighter.declareWinner(new Fighter("Harald", 20, 5), new Fighter("Harry", 5, 4), "Harald"));
+    assertEquals(
+        "Harald",
+        Fighter.declareWinner(new Fighter("Jerry", 30, 3), new Fighter("Harald", 20, 5), "Jerry"));
+    assertEquals(
+        "Harald",
+        Fighter.declareWinner(new Fighter("Jerry", 30, 3), new Fighter("Harald", 20, 5), "Harald"));
+  }
+
+  @Test
+  public void testFakeBinary() {
+    FakeBinary fakeBinary = new FakeBinary();
+    assertEquals("01011110001100111", fakeBinary.fakeBin("45385593107843568"));
+    assertEquals("101000111101101", fakeBinary.fakeBin("509321967506747"));
+    assertEquals("011011110000101010000011011", fakeBinary.fakeBin("366058562030849490134388085"));
+  }
+
+  @Test
   public void testEmptyArray() throws Exception {
     assertEquals("Empty arrays should have a max of 0", 0, Max.sequence(new int[] {}));
     assertEquals(
