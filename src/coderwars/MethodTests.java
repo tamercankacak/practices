@@ -21,6 +21,40 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testWeightSort() {
+    System.out.println("****** Basic Tests ******");
+    assertEquals("2000 103 123 4444 99", WeightSort.orderWeight("103 123 4444 99 2000"));
+    assertEquals("11 11 2000 10003 22 123 1234000 44444444 9999", WeightSort.orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123"));
+  }
+
+  @Test
+  public void testAreSame() {
+    int[] a = new int[] {121, 144, 19, 161, 19, 144, 19, 11};
+    int[] b = new int[] {121, 14641, 20736, 361, 25921, 361, 20736, 361};
+    assertEquals(true, AreSame.comp(a, b));
+  }
+
+  @Test
+  public void testMaxMultiple() {
+    assertEquals(
+        "The largest multiple of 2 between 0 and 7 is 6.", 6, MaxMultiple.maxMultiple(2, 7));
+    assertEquals(
+        "The largest multiple of 3 between 0 and 10 is 9.", 9, MaxMultiple.maxMultiple(3, 10));
+    assertEquals(
+        "The largest multiple of 7 between 0 and 17 is 14.", 14, MaxMultiple.maxMultiple(7, 17));
+    assertEquals(
+        "The largest multiple of 10 between 0 and 50 is 50.",
+        50,
+        MaxMultiple.maxMultipleCodeWars(10, 50));
+    assertEquals(
+        "The largest multiple of 37 between 0 and 200 is 185.",
+        185,
+        MaxMultiple.maxMultiple(37, 200));
+    assertEquals(
+        "The largest multiple of 7 between 0 and 100 is 98.", 98, MaxMultiple.maxMultiple(7, 100));
+  }
+
+  @Test
   public void testProdFib() {
     long[] r = new long[] {55, 89, 1};
     assertArrayEquals(r, ProdFib.productFib(4895));
