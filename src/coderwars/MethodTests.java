@@ -21,6 +21,46 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testScramblies() {
+    System.out.println("Fixed Tests scramble");
+    assertEquals(Scramblies.scramble("rkqodlw", "world"), true);
+    assertEquals(Scramblies.scramble("cedewaraaossoqqyt", "codewars"), true);
+    assertEquals(Scramblies.scramble("katas", "steak"), false);
+    assertEquals(Scramblies.scramble("scriptjavx", "javascript"), false);
+    assertEquals(Scramblies.scramble("scriptingjava", "javascript"), true);
+    assertEquals(Scramblies.scramble("scriptsjava", "javascripts"), true);
+    assertEquals(Scramblies.scramble("javscripts", "javascript"), false);
+    assertEquals(Scramblies.scramble("aabbcamaomsccdd", "commas"), true);
+    assertEquals(Scramblies.scramble("commas", "commas"), true);
+    assertEquals(Scramblies.scramble("sammoc", "commas"), true);
+  }
+
+  @Test
+  public void testWhichAreIn() {
+    String a[] = new String[] {"arp", "live", "strong"};
+    String b[] = new String[] {"lively", "alive", "harp", "sharp", "armstrong"};
+    String r[] = new String[] {"arp", "live", "strong"};
+    assertArrayEquals(r, WhichAreIn.inArray(a, b));
+  }
+
+  @Test
+  public void testReverseLetter() {
+    doTest("krishan", "nahsirk");
+    doTest("ultr53o?n", "nortlu");
+    doTest("ab23c", "cba");
+    doTest("krish21an", "nahsirk");
+  }
+
+  private void doTest(final String str, final String expected) {
+    assertEquals(expected, ReverseLetter.reverseLetter(str));
+  }
+
+  @Test
+  public void testCalculate() {
+    assertEquals("Normal", Calculate.bmi(80, 1.80));
+  }
+
+  @Test
   public void testExpandedForm() {
     assertEquals("10 + 2", ExpandedForm.expandedForm(12));
     assertEquals("40 + 2", ExpandedForm.expandedForm(42));
