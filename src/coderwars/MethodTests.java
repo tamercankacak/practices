@@ -21,6 +21,21 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testAnagramDetection() {
+
+    assertEquals(true, AnagramDetection.isAnagram("foefet", "toffee"));
+    assertEquals(true, AnagramDetection.isAnagram("Buckethead", "DeathCubeK"));
+    assertEquals(true, AnagramDetection.isAnagram("Twoo", "Woot"));
+    assertEquals(false, AnagramDetection.isAnagram("apple", "pale"));
+  }
+
+  @Test
+  public void testTrue() {
+    assertEquals(BooleanToString.convert(true), "true");
+    assertEquals(BooleanToString.convert(false), "false");
+  }
+
+  @Test
   public void testScramblies() {
     System.out.println("Fixed Tests scramble");
     assertEquals(Scramblies.scramble("rkqodlw", "world"), true);
