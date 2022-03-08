@@ -21,6 +21,12 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testMethodTests() {
+    assertEquals(3, BouncingBall.bouncingBall(3.0, 0.66, 1.5));
+    assertEquals(15, BouncingBall.bouncingBall(30.0, 0.66, 1.5));
+  }
+
+  @Test
   public void testAnagramDetection() {
 
     assertEquals(true, AnagramDetection.isAnagram("foefet", "toffee"));
