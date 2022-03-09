@@ -21,6 +21,24 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testBonus() {
+    boolean wellConfigured=unicodeTest();
+    assertEquals((wellConfigured?"£":"\u00A3")+"100000",Bonus.bonusTime(10000, true));
+    assertEquals((wellConfigured?"£":"\u00A3")+"250000",Bonus.bonusTime(25000, true));
+    assertEquals((wellConfigured?"£":"\u00A3")+"10000",Bonus.bonusTime(10000, false));
+    assertEquals((wellConfigured?"£":"\u00A3")+"60000",Bonus.bonusTime(60000, false));
+    assertEquals((wellConfigured?"£":"\u00A3")+"20",Bonus.bonusTime(2, true));
+    assertEquals((wellConfigured?"£":"\u00A3")+"78",Bonus.bonusTime(78, false));
+    assertEquals((wellConfigured?"£":"\u00A3")+"678900",Bonus.bonusTime(67890, true));
+  }
+
+  public boolean unicodeTest(){
+    System.out.println("\u00A3 == £:"+"\u00A3".equalsIgnoreCase("£"));
+    System.out.println("if previous result was false or had ? symbol then perhaps you need to escape unicode due to misconfiguration");
+    return "\u00A3".equalsIgnoreCase("£");
+  }
+
+  @Test
   public void testMethodTests() {
     assertEquals(3, BouncingBall.bouncingBall(3.0, 0.66, 1.5));
     assertEquals(15, BouncingBall.bouncingBall(30.0, 0.66, 1.5));
