@@ -21,6 +21,19 @@ import org.junit.Test;
 public class MethodTests {
 
   @Test
+  public void testTurkeySigortaChallenge() {
+    TurkeySigortaChallenge.closestNumbers(
+        new ArrayList<Integer>() {
+          {
+            add(6);
+            add(2);
+            add(4);
+            add(10);
+          }
+        });
+  }
+
+  @Test
   public void testMinimum() {
     assertEquals(13, Minimum.minValue(new int[] {1, 3, 1}));
     assertEquals(457, Minimum.minValue(new int[] {4, 7, 5, 7}));
